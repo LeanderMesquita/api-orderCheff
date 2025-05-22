@@ -38,4 +38,89 @@ public class Ingredient {
 
     @UpdateTimestamp
     private LocalDate updatedAt;
+
+    public Ingredient () {
+
+    }
+
+    public Ingredient(Measure measure, Set<Item> items, Double price, Boolean inStock, Integer quantity, LocalDate expDate) {
+        this.measure = measure;
+        this.items = items;
+        this.price = price;
+        this.inStock = inStock;
+        this.quantity = quantity;
+        this.expDate = expDate;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Measure getMeasure() {
+        return measure;
+    }
+
+    public void setMeasure(Measure measure) {
+        this.measure = measure;
+    }
+
+    public Set<Item> getItems() {
+        return items;
+    }
+
+    public void setItems(Set<Item> items) {
+        this.items = items;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public Boolean getInStock() {
+        return inStock;
+    }
+
+    public void setInStock(Boolean inStock) {
+        this.inStock = inStock;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
+
+    public LocalDate getExpDate() {
+        return expDate;
+    }
+
+    public void setExpDate(LocalDate expDate) {
+        this.expDate = expDate;
+    }
+
+    public LocalDate getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDate createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public LocalDate getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(LocalDate updatedAt) {
+        this.updatedAt = updatedAt;
+    }
 }
