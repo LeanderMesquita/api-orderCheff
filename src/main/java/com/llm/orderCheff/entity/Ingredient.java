@@ -43,9 +43,8 @@ public class Ingredient {
 
     }
 
-    public Ingredient(Measure measure, Set<Item> items, Double price, Boolean inStock, Integer quantity, LocalDate expDate) {
+    public Ingredient(Measure measure, Double price, Boolean inStock, Integer quantity, LocalDate expDate) {
         this.measure = measure;
-        this.items = items;
         this.price = price;
         this.inStock = inStock;
         this.quantity = quantity;
@@ -54,10 +53,6 @@ public class Ingredient {
 
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public Measure getMeasure() {
@@ -112,15 +107,8 @@ public class Ingredient {
         return createdAt;
     }
 
-    public void setCreatedAt(LocalDate createdAt) {
-        this.createdAt = createdAt;
-    }
-
     public LocalDate getUpdatedAt() {
         return updatedAt;
     }
 
-    public void setUpdatedAt(LocalDate updatedAt) {
-        this.updatedAt = updatedAt;
-    }
 }

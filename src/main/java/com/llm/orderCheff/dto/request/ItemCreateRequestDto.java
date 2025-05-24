@@ -7,7 +7,6 @@ import java.util.Set;
 
 public record ItemCreateRequestDto(
     Double price,
-    Boolean inStock,
     Integer quantity,
     Set<Ingredient> ingredients,
     Measure measure

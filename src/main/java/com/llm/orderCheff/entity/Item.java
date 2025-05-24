@@ -56,9 +56,6 @@ public class Item {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public Double getPrice() {
         return price;
@@ -104,15 +101,8 @@ public class Item {
         return createdAt;
     }
 
-    public void setCreatedAt(LocalDate createdAt) {
-        this.createdAt = createdAt;
-    }
-
     public LocalDate getUpdatedAt() {
         return updatedAt;
     }
 
-    public void setUpdatedAt(LocalDate updatedAt) {
-        this.updatedAt = updatedAt;
-    }
 }

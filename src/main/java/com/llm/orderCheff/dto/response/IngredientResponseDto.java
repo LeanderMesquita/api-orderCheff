@@ -13,6 +13,7 @@ public record IngredientResponseDto(
         Set<Item> items,
         Double price,
         Boolean inStock,
+        Integer quantity,
         LocalDate expDate,
         LocalDate createdAt,
         LocalDate updatedAt
@@ -24,6 +25,7 @@ public record IngredientResponseDto(
                 ingredient.getItems(),
                 ingredient.getPrice(),
                 ingredient.getInStock(),
+                ingredient.getQuantity(),
                 ingredient.getExpDate(),
                 ingredient.getCreatedAt(),
                 ingredient.getUpdatedAt()
