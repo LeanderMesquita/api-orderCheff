@@ -5,6 +5,7 @@ import com.llm.orderCheff.dto.request.IngredientUpdateRequestDto;
 import com.llm.orderCheff.dto.response.IngredientResponseDto;
 import com.llm.orderCheff.entity.Ingredient;
 import com.llm.orderCheff.service.IngredientService;
+import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -41,13 +42,13 @@ public class IngredientController {
     }
 
     @PostMapping
-    public ResponseEntity<Void> create(@RequestBody IngredientCreateRequestDto requestDto){
+    public ResponseEntity<Void> create(@Valid @RequestBody IngredientCreateRequestDto requestDto){
         service.create(requestDto);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Void> update(@PathVariable Long id, @RequestBody IngredientUpdateRequestDto requestDto){
+    public ResponseEntity<Void> update(@PathVariable Long id, @Valid @RequestBody IngredientUpdateRequestDto requestDto){
         service.update(id, requestDto);
         return new ResponseEntity<>(HttpStatus.OK);
     }

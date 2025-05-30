@@ -5,6 +5,7 @@ import com.llm.orderCheff.dto.request.ItemUpdateRequestDto;
 import com.llm.orderCheff.dto.response.ItemResponseDto;
 import com.llm.orderCheff.entity.Item;
 import com.llm.orderCheff.service.ItemService;
+import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -41,13 +42,13 @@ public class ItemController {
     }
 
     @PostMapping
-    public ResponseEntity<Void> create(@RequestBody ItemCreateRequestDto requestDto){
+    public ResponseEntity<Void> create(@Valid @RequestBody ItemCreateRequestDto requestDto){
         service.create(requestDto);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Void> update(@PathVariable Long id, @RequestBody ItemUpdateRequestDto requestDto){
+    public ResponseEntity<Void> update(@PathVariable Long id, @Valid @RequestBody ItemUpdateRequestDto requestDto){
         service.update(id, requestDto);
         return new ResponseEntity<>(HttpStatus.OK);
     }
